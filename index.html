@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <title>The Halal Stop | Fast Food Restaurant</title>
+        <link rel = "stylesheet" href="style.css">
+        <link rel = "icon" href="images/logo.jpg" type = "image/jpg">
+
+    </head>
+
+    <body>
+        <!--HEADER-->
+        <header class="navbar">
+            <div class ="logo"></div> 
+            <h1 style = "color : #ffff">The Halal Stop</h1>
+            <button class = "hamburger" aria-label ="Toggle Menu">☰ Menu</button>
+            <nav>
+                <ul class ="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+        </header>    
+        
+        <!--HERO SECTION-->
+        <section class = "hero">
+            <div class = "hero-text">
+                <h2>The Halal Stop</h2>
+                <p>Experience bold flavors, made with 100% halal ingredients - every bite, every time.</p>
+                <a href = "#" class = "order-button">Order Now</a>
+            </div>
+        </section>
+
+        <!--Image Gallery Section-->
+        <section class = "gallery">
+            <h2>Gallery</h2>
+            <div class="slider">
+                <img src = "images/Chicken-Shawarma.jpg" alt = "Food 1">
+                <img src= "images/beef-burgers.jpeg" alt = "Food 2">
+                <img src="images/chairs_tables.jpg" alt="Interior 1">
+                <img src ="images/ice_cream.jpeg" alt = "Food 3">
+                <img src="images/counter.jpg" alt = "Interior 2">
+                <img src ="images/family_eating.jpg" alt = "Interior 3">
+
+            </div>
+        </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="socials">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            </div>
+
+            <div class="hours">
+            <h4>Business Hours</h4>
+            <p>Mon–Thu: 11am – 8pm</p>
+            <p>Fri–Sat: 11am – 11pm</p>
+            <p>Sun: Closed</p>
+            </div>
+
+            <p class="copyright">© 2025 The Halal Stop. All rights reserved.</p>
+        </div>
+    </footer>
+
+        
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-links');
+        if(hamburger && navMenu){
+            hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            });
+        }
+        
+        
+    </script>
+    </body>
+
+
+</html>
