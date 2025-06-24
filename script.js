@@ -67,5 +67,7 @@ clearCartBtn.addEventListener('click', () => {
 
 //when the "clear cart" button is clicked:
 //it removes everyhting from the cart 
-//then refreshes the screen 
+//then refreshes the screen
+
+//testing
 });
