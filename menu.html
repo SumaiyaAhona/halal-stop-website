@@ -29,6 +29,7 @@
                 <h3>Cheeseburger</h3>
                 <p>Juicy grilled beef patty with cheese, lettuce, tomato, and sauce.</p>
                 <span>$8.99</span>
+                <button class = "add-to-cart" data-name= "Cheeseburger" data-price="8.99">Add to Cart</button>
             </div>
 
             <div class="menu-card">
@@ -36,6 +37,7 @@
                 <h3>Chicken Wrap</h3>
                 <p>Spiced grilled chicken with fresh veggies wrapped in pita.</p>
                 <span>$7.49</span>
+                <button class = "add-to-cart" data-name= "Chicken Wrap" data-price="7.49">Add to Cart</button>
             </div>
 
             <div class="menu-card">
@@ -43,6 +45,7 @@
                 <h3>French Fries</h3>
                 <p>Golden crispy fries served with ketchup or special sauce.</p>
                 <span>$3.49</span>
+                <button class = "add-to-cart" data-name= "French Fries " data-price="3.49">Add to Cart</button>
             </div>
 
             <div class="menu-card">
@@ -50,6 +53,7 @@
                 <h3>Ice Cream</h3>
                 <p>Indulge in our rich, creamy ice cream — available in classic flavors like vanilla, chocolate, and strawberry. Perfect for cooling down after a spicy meal or treating yourself to something sweet.</p>
                 <span>$2.99</span>
+                <button class = "add-to-cart" data-name= "Ice Cream" data-price="2.99">Add to Cart</button>
             </div>
 
             <div class = "menu-card">
@@ -57,8 +61,18 @@
                 <h3>Mango Lassi</h3>
                 <p>A refreshing blend of sweet mangoes, creamy yogurt, and a hint of cardamom — our Mango Lassi is the perfect balance of fruity and smooth. </p>
                 <span>$5.75</span>
+                <button class = "add-to-cart" data-name= "Mango Lassi" data-price="5.75">Add to Cart</button>
             </div>
         </div>
     </section>
+
+    <!-- Cart Section -->
+     <section class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: $0.00</p>
+        <button id="clear-cart">Clear Cart</button>
+     </section>
+<script src ="script.js" defer></script>
 </body>
 </html>
