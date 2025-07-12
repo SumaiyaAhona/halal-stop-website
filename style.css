@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+
+
+.hero {
+    background-image: url('images/burger_fries.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(5, 5, 5, 0.4); 
+    z-index: 1;
+    
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding : 30px;
+    
+}
+
+.hero-text h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    
+}
+
+.order-button {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    background: rgba(11, 11, 11, 0.6); /* slight transparency over the image */
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+/* Menu Page Styling */
+.menu {
+    padding: 100px 50px;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.menu-card {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 5px;
+}
+
+.menu-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.menu-card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+.gallery{
+    text-align: center;
+    padding: 50px;
+}
+
+.slider {
+    display: flex;
+    overflow-x: scroll;
+    gap: 20ox;
+
+}
+
+.slider img{
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    scroll-snap-align: center;
+    border-radius: 10px;
+}
+
+.about {
+    padding: 60px;
+    background: linear-gradient(to right, #fff9f2, #ffeedd);
+    text-align: center;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+.about-container {
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.about-container h2 {
+    font-size: 2rem;
+    color: #d35400; /* warm orange */
+    margin-bottom: 15px;
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact {
+    background-color: #fff9f2;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #d35400;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.contact-form button:hover {
+    background-color: #b84300;
+}
+
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.footer {
+    background-color: #222;
+    color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer .socials a {
+    color: #f39c12;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer .socials a:hover {
+    color: #fff;
+}
+
+.footer .hours h4 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #f39c12;
+}
+
+.footer .hours p {
+    margin: 3px 0;
+    font-size: 1rem;
+}
+
+.footer p {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+
+
+
+
+
+/* MOBILE-FIRST: base styles are for small screens */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Stack nav items vertically on small screens */
+  background-color: #d35400;
+}
+
+nav ul li {
+  border-bottom: 1px solid #fff;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #b84300;
+}
+
+/* Hide the nav by default (for hamburger toggle) */
+nav ul {
+  display: none;
+}
+
+/* Hamburger button styles */
+.hamburger {
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  color: white;
+  background-color: #d35400;
+  border: none;
+  width: auto;
+  text-align: left;
+  position: relative;  
+  z-index: 20;        /* Make sure it’s on top */
+}
+
+.hamburger:hover {
+  background-color: #b84300;
+  border: 2px solid white;
+}
+
+
+/* When nav is active (after clicking hamburger) */
+nav ul.active {
+  display: flex;
+}
+
+.nav-links {
+  display: none;
+  /* other styles */
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+
+/* Larger screens: show nav horizontally and always visible */
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    background-color: transparent;
+  }
+  nav ul li {
+    border: none;
+  }
+  nav ul li a {
+    padding: 15px 20px;
+    color: #d35400;
+  }
+  nav ul li a:hover {
+    background-color: #ffe6cc;
+  }
+}
+
+/* Make sections stack nicely */
+.contact-content, .about-container {
+  flex-direction: column; /* Stack on small */
+}
+
+/* For larger screens, keep flex-row for contact-content */
+@media screen and (min-width: 768px) {
+  .contact-content {
+    flex-direction: row;
+  }
+}
+
+
+
+/* Cart Section Styling */
+.cart {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.cart h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.cart button {
+  background-color: #ff5500;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.cart button:hover {
+  background-color: #cc4400;
+}
+
+#clear-cart {
+  margin-top: 20px;
+  background-color: #666;
+}
+
+#clear-cart:hover {
+  background-color: #444;
+}
+
+
+.add-to-cart {
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #e6b800;
+}
+
+
+
