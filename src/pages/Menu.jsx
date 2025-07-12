@@ -1,8 +1,7 @@
 import React from 'react';
 import '../style.css';
 
-
-export default function Menu() {
+export default function Menu({ addToCart, cartItems, clearCart }) {
   const menuItems = [
     {
       name: 'Cheeseburger',
@@ -36,6 +35,8 @@ export default function Menu() {
     },
   ];
 
+  const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+
   return (
     <div className="menu-container">
       <section className="menu">
@@ -49,8 +50,7 @@ export default function Menu() {
               <span>${item.price.toFixed(2)}</span>
               <button
                 className="add-to-cart"
-                data-name={item.name}
-                data-price={item.price}
+                onClick={() => addToCart(item)}
               >
                 Add to Cart
               </button>
@@ -61,10 +61,23 @@ export default function Menu() {
 
       <section className="cart">
         <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <p id="cart-total">Total: $0.00</p>
-        <button id="clear-cart">Clear Cart</button>
+        {cartItems.length === 0 ? (
+          <p>Your cart is empty.</p>
+        ) : (
+          <>
+            <ul>
+              {cartItems.map((item, index) => (
+                <li key={index}>
+                  {item.name} — ${item.price.toFixed(2)}
+                </li>
+              ))}
+            </ul>
+            <p>Total: ${totalPrice.toFixed(2)}</p>
+            <button onClick={clearCart}>Clear Cart</button>
+          </>
+        )}
       </section>
     </div>
   );
 }
+
